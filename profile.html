@@ -65,6 +65,19 @@
 .mycolor{
   color: #6c757d;
 }
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+  padding: 5px;
+}
+i{
+  margin-right: 10px;
+}
+.rad{
+  border-radius: 10px;
+}
 
   </style>
 </head>
@@ -445,77 +458,21 @@
                 
               </div>
             </div>
-            <div class="row">
-              
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                  <div class="card-icon l-bg-purple">
-                    <i class="fas fa-cart-plus"></i>
-                  </div>
-                  <div class="card-wrap">
-                    <div class="padding-20">
-                      <div class="text-right">
-                        <h3 class="font-light mb-0">
-                          <i class="ti-arrow-up text-success"></i> Free
-                        </h3>
-                        <span class="text-muted">Package</span>
-                      </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-bg"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                  <div class="p-t-20 d-flex justify-content-between">
+                    <div class="col">
+                      <h6 class="mb-0">Total Balance</h6>
+                      <span class="font-weight-bold mb-0 font-20">$2,687</span>
                     </div>
+                    <i class="fas fa-hand-holding-usd card-icon col-cyan font-30 p-r-30"></i>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                  <div class="card-icon l-bg-green">
-                    <i class="fas fa-coins"></i>
-                  </div>
-                  <div class="card-wrap">
-                    <div class="padding-20">
-                      <div class="text-right">
-                        <h3 class="font-light mb-0">
-                          <i class="ti-arrow-up text-success"></i> ৳158
-                        </h3>
-                        <span class="text-muted">Balance</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                  <div class="card-icon l-bg-cyan">
-                    <i class="far fa-money-bill-alt"></i>
-                  </div>
-                  <div class="card-wrap">
-                    <div class="padding-20">
-                      <div class="text-right">
-                        <h3 class="font-light mb-0">
-                          <i class="far fa-money-bill-alt"></i> ৳785
-                        </h3>
-                        <span class="text-muted">Deposit</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                  <div class="card-icon l-bg-orange">
-                    <i class="fas fa-dollar-sign"></i>
-                  </div>
-                  <div class="card-wrap">
-                    <div class="padding-20">
-                      <div class="text-right">
-                        <h3 class="font-light mb-0">
-                          <i class="ti-arrow-up text-success"></i> ৳785
-                        </h3>
-                        <span class="text-muted">Todays Income</span>
-                      </div>
-                    </div>
-                  </div>
+                  <canvas id="cardChart4" height="63" width="237" style="display: block; width: 237px; height: 63px;" class="chartjs-render-monitor"></canvas>
                 </div>
               </div>
             </div>
+            
             
             
           </div>
@@ -524,74 +481,54 @@
           <div class="card">
             
             <div class="card-body">
-              <div class="row">
+              
                 
-                <div class="col-md-6 col-lg-3">
-                  <a href="history.html" style="text-decoration: none;">
-                  <div class="card card-primary">
-                    <div class="card-body text-center">
-                      <img class="img-fluid" src="assets/img/cardimage/1.png" alt="">
-                      <h5 class="mycolor text-center">Deposit History</h5>
-                    </div>
-                  </div>
-                </a>
-                </div>
+                <ul>
+                  <li class="nav-item">
+                    <a href="history.html" class="nav-link">
+                      <ul class="row" style="padding: 0px;">
+                        <li class="nav-item card-icon rad l-bg-purple"><i class="fas fa-piggy-bank"></i></li>
+                        <li class="font-bold text-dark ml-3">Deposit History</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="history.html"  class="nav-link">
+                      <ul class="row" style="padding: 0px;">
+                        <li class="card-icon rad l-bg-green"><i class="fas fa-money-check"></i></li>
+                        <li  class="font-bold text-dark ml-3">Withdraw History</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="team.html" class="nav-link">
+                      <ul class="row" style="padding: 0px;">
+                        <li class="card-icon rad l-bg-cyan"><i class="fas fa-share-alt-square"></i></li>
+                        <li class="font-bold text-dark ml-3">Invite</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="team.html" class="nav-link">
+                      <ul class="row" style="padding: 0px;">
+                        <li class="card-icon rad l-bg-yellow"><i class="fas fa-users"></i></li>
+                        <li class="font-bold text-dark ml-3">My Team</li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="auth-login.html" class="nav-link">
+                      <ul class="row" style="padding: 0px;">
+                        <li class="card-icon rad l-bg-orange"><i class="fas fa-arrow-circle-left"></i></li>
+                        <li class="font-bold text-dark ml-3">Logout</li>
+                      </ul>
+                    </a>
+                  </li>
+                  
+                </ul>
                 
-                <div class="col-md-6 col-lg-3">
-                  <a href="history.html" style="text-decoration: none;">
-                  <div class="card card-primary">
-                    <div class="card-body text-center">
-                      <img class="img-fluid" src="assets/img/cardimage/2.png" alt="">
-                      <h5 class="mycolor text-center">Withdraw History</h5>
-                    </div>
-                  </div>
-                </a>
-                </div>
-                
-                
-                <div class="col-md-6 col-lg-3">
-                  <a href="team.html" style="text-decoration: none;">
-                  <div class="card card-primary">
-                    <div class="card-body text-center">
-                      <img class="img-fluid" src="assets/img/cardimage/5.png" alt="">
-                      <h5 class="mycolor text-center">Team</h5>
-                    </div>
-                  </div>
-                </a>
-                </div>
-                
-                <div class="col-md-6 col-lg-3">
-                  <a href="team.html" style="text-decoration: none;">
-                  <div class="card card-primary">
-                    <div class="card-body text-center">
-                      <img class="img-fluid" src="assets/img/cardimage/7.png" alt="">
-                      <h5 class="mycolor text-center">Invite</h5>
-                    </div>
-                  </div>
-                </a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                  <a href="#" style="text-decoration: none;">
-                  <div class="card card-primary">
-                    <div class="card-body text-center">
-                      <img class="img-fluid" src="assets/img/cardimage/9.png" alt="">
-                      <h5 class="mycolor text-center">Security</h5>
-                    </div>
-                  </div>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                  <a href="auth-login.html" style="text-decoration: none;">
-                  <div class="card card-primary">
-                    <div class="card-body text-center">
-                      <img class="img-fluid" src="assets/img/cardimage/10.png" alt="">
-                      <h5 class="mycolor text-center">Logout</h5>
-                    </div>
-                  </div>
-                </a>
-                </div>
                
-              </div>
+              
             </div>
             
           </div>
@@ -619,6 +556,7 @@
             </div>
           </div>
         </div>
+
         <nav class="bottom-menu">
           <ul>
             <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
